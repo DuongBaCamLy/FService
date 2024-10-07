@@ -1,9 +1,117 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0" version="24.7.17">
   <diagram name="Page-1" id="Jn11AVdxsEqLQVWZZkke">
-    <mxGraphModel>
+    <mxGraphModel dx="1426" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="UHCKPl9xlKdbka32-CNH-5" value="Singleton" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="360" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-6" value="- instance: Singleton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-5">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-5">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-8" value="+ getInstance ( ) : Singleton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-5">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-16" value="Factory Method" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="10" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-17" value="+factoryMethod ( ) :Product" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-16">
+          <mxGeometry y="29" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-19" value="Creator" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-20" value="+ factory_method ( )" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-19">
+          <mxGeometry y="29" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-21" value="«interface»&lt;br&gt;&lt;b&gt;Propotype&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="640" y="14" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-22" value="+ clone : Propotype" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="640" y="64" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-27" value="ConcretePropotype" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="120" width="180" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-28" value="- field 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-27">
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-29" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-27">
+          <mxGeometry y="52" width="180" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-30" value="+ clone ( ) :&amp;nbsp;ConcretePrototype" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-27">
+          <mxGeometry y="60" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-33" value="Product" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-34" value="+ operation ( )" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-33">
+          <mxGeometry y="29" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-35" value="ConcreteCreatorA" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="160" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-36" value="+ factory_method ( )" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-35">
+          <mxGeometry y="29" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-37" value=" ConcreteProductA" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="240" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-38" value="+ operation ( )   " style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-37">
+          <mxGeometry y="29" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-39" value="ConcreteCreatorB " style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-40" value="+ factory_method ( ) " style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-39">
+          <mxGeometry y="29" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-41" value=" ConcreteProductB " style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-42" value="+ operation ( )&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-41">
+          <mxGeometry y="29" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-43" value="«interface»&lt;br&gt;&lt;b&gt;Builder&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="320" y="360" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-44" value="+ reset ( )&lt;br&gt;+ buildStepA ( )&lt;br&gt;+ buildStepB ( )&amp;nbsp;&lt;br&gt;+buildStepC ( )" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="320" y="410" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-45" value="Director" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="360" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-46" value="- builder : Builder" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-45">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-47" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-45">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-48" value="+ director (builder )&lt;br&gt;+ changeBuilder (builder )&lt;br&gt;+ make (type)&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-45">
+          <mxGeometry y="60" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-49" value="«interface»&lt;br&gt;&lt;b&gt;AbstractFactory&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="525" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-50" value="+ createProductA ( ) :Product A&lt;br&gt;+ createProductB ( ) :Product B&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="20" y="570" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-51" value="Client" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="520" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-52" value="-factory: AbstractFactory" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-51">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-53" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-51">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="UHCKPl9xlKdbka32-CNH-54" value="+ client ( f: AbstractFactory)&lt;br&gt;+ someOperations&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UHCKPl9xlKdbka32-CNH-51">
+          <mxGeometry y="60" width="160" height="70" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
