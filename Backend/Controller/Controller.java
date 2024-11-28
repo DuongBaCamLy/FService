@@ -1,51 +1,56 @@
-package com.pdm.farming.Layers;
+package com.pdm.farming.Controller;
+
+import com.pdm.farming.Entities.Soil;
+import com.pdm.farming.Service.SoilService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.pdm.farming.Entities.Farmer;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/farmers")
+@RequestMapping("/api/soils")
 public class Controller {
 
-    private final FarmerService farmerService;
+    @Autowired
+    private SoilService soilService;
 
-    public Controller(FarmerService farmerService) {
-        this.farmerService = farmerService;
-    }
-
+    // Create a new soil record
     @PostMapping
-    public ResponseEntity<Farmer> createFarmer(@RequestBody Farmer farmer) {
-        return ResponseEntity.ok(farmerService.createFarmer(farmer));
+    public Soil createSoil(@RequestBody Soil soil) {
+        return soilService.saveSoil(soil);
     }
 
-    @GetMapping
-    public ResponseEntity<List<Farmer>> getAllFarmers() {
-        return ResponseEntity.ok(farmerService.getAllFarmers());
-    }
-
+    // Get a soil record by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Farmer> getFarmerById(@PathVariable Long id) {
-        return ResponseEntity.ok(farmerService.getFarmerById(id));
+    public Optional<Soil> getSoilById(@PathVariable Long id) {
+        return soilService.getSoilById(id);
     }
 
+    // Get all soil records
+    @GetMapping
+    public List<Soil> getAllSoils() {
+        return soilService.getAllSoils();
+    }
+
+    // Update an existing soil record
     @PutMapping("/{id}")
-    public ResponseEntity<Farmer> updateFarmer(@PathVariable Long id, @RequestBody Farmer farmer) {
-        return ResponseEntity.ok(farmerService.updateFarmer(id, farmer));
+    public Soil updateSoil(@PathVariable Long id, @RequestBody Soil updatedSoil) {
+        return soilService.updateSoil(id, updatedSoil);
     }
 
+    // Delete a soil record by ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteFarmer(@PathVariable Long id) {
-        farmerService.deleteFarmer(id);
-        return ResponseEntity.noContent().build();
+    public void deleteSoil(@PathVariable Long id) {
+        soilService.deleteSoil(id);
+    }
+
+    // Get a soil record by Field ID
+    @GetMapping("/field/{fieldId}")
+    public Soil getSoilByFieldId(@PathVariable Long fieldId) {
+        return soilService.getSoilByFieldId(fieldId);
     }
 }
+
+
