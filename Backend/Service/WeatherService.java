@@ -27,19 +27,21 @@ public class WeatherService {
     }
 
     public List<Weather> getWeatherByDate(LocalDate date) {
-        return weatherRepository.findByDate(date);
+        return weatherRepository.findByRecordAt(date);
     }
 
     public List<Weather> getWeatherByDateRange(LocalDate startDate, LocalDate endDate) {
-        return weatherRepository.findByDateBetween(startDate, endDate);
+        return weatherRepository.findByRecordAtBetween(startDate, endDate);
     }
 
     public Weather updateWeather(Long id, Weather weather) {
         Weather existingWeather = weatherRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Weather not found"));
-        existingWeather.setDate(weather.getDate());
+                .orElseThrow(() -> new RuntimeException("Weather record not found"));
         existingWeather.setTemperature(weather.getTemperature());
         existingWeather.setHumidity(weather.getHumidity());
+        existingWeather.setPressure(weather.getPressure());
+        existingWeather.setWindSpeed(weather.getWindSpeed());
+        existingWeather.setRecordAt(weather.getRecordAt());
         existingWeather.setFarmer(weather.getFarmer());
         return weatherRepository.save(existingWeather);
     }
