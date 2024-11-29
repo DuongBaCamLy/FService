@@ -16,50 +16,41 @@ public class WeatherController {
     @Autowired
     private WeatherService weatherService;
 
-    // Create a new weather record
     @PostMapping
     public ResponseEntity<Weather> createWeather(@RequestBody Weather weather) {
-        Weather savedWeather = weatherService.createWeather(weather);
-        return ResponseEntity.ok(savedWeather);
+        Weather createdWeather = weatherService.createWeather(weather);
+        return ResponseEntity.ok(createdWeather);
     }
 
-    // Get all weather records
     @GetMapping
     public ResponseEntity<List<Weather>> getAllWeather() {
         return ResponseEntity.ok(weatherService.getAllWeather());
     }
 
-    // Get weather records by farmer ID
     @GetMapping("/farmer/{farmerId}")
     public ResponseEntity<List<Weather>> getWeatherByFarmerId(@PathVariable Long farmerId) {
         return ResponseEntity.ok(weatherService.getWeatherByFarmerId(farmerId));
     }
 
-    // Get weather records by date
     @GetMapping("/date/{date}")
     public ResponseEntity<List<Weather>> getWeatherByDate(@PathVariable String date) {
-        LocalDate parsedDate = LocalDate.parse(date);
-        return ResponseEntity.ok(weatherService.getWeatherByDate(parsedDate));
+        LocalDate recordDate = LocalDate.parse(date);
+        return ResponseEntity.ok(weatherService.getWeatherByDate(recordDate));
     }
 
-    // Get weather records by date range
-    @GetMapping("/date-range")
+    @GetMapping("/range")
     public ResponseEntity<List<Weather>> getWeatherByDateRange(
-            @RequestParam String startDate,
-            @RequestParam String endDate) {
+            @RequestParam String startDate, @RequestParam String endDate) {
         LocalDate start = LocalDate.parse(startDate);
         LocalDate end = LocalDate.parse(endDate);
         return ResponseEntity.ok(weatherService.getWeatherByDateRange(start, end));
     }
 
-    // Update a weather record
     @PutMapping("/{id}")
     public ResponseEntity<Weather> updateWeather(@PathVariable Long id, @RequestBody Weather weather) {
-        Weather updatedWeather = weatherService.updateWeather(id, weather);
-        return ResponseEntity.ok(updatedWeather);
+        return ResponseEntity.ok(weatherService.updateWeather(id, weather));
     }
 
-    // Delete a weather record by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteWeather(@PathVariable Long id) {
         weatherService.deleteWeather(id);
