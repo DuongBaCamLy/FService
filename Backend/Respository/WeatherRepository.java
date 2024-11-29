@@ -9,13 +9,12 @@ import java.util.List;
 
 @Repository
 public interface WeatherRepository extends JpaRepository<Weather, Long> {
-    // Find weather records by farmer ID
+    // Tìm theo ID nông dân
     List<Weather> findByFarmer_FarmerId(Long farmerId);
 
-    // Find weather records by date
-    List<Weather> findByDate(LocalDate date);
+    // Tìm theo ngày cụ thể
+    List<Weather> findByRecordAt(LocalDate recordAt);
 
-    // Find weather records within a date range
-    List<Weather> findByDateBetween(LocalDate startDate, LocalDate endDate);
+    // Tìm theo khoảng thời gian
+    List<Weather> findByRecordAtBetween(LocalDate startDate, LocalDate endDate);
 }
-
