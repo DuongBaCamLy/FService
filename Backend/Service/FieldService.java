@@ -3,8 +3,8 @@ package com.pdm.farming.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pdm.farming.Repository.FarmerRepository;
-import com.pdm.farming.Repository.FieldRepository;
+import com.pdm.farming.Respository.FarmerRepository;
+import com.pdm.farming.Respository.FieldRepository;
 
 import jakarta.transaction.Transactional;
 
